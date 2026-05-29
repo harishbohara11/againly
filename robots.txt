@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harishbohara11.github.io/againly/sitemap.xml
