@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================= -->
+<!-- REPLACE every instance of https://againly.app with your real  -->
+<!-- domain once you have it (or your username.github.io URL).      -->
+<!-- ============================================================= -->
+
+<title>Againly – Recurring Reminder App That Nudges You Until It's Done</title>
+<meta name="description" content="Againly is a recurring reminder app for Android. It keeps nudging you with repeating reminders until each task is actually done — during your hours only, with priority-based frequency. No ads, private by design.">
+<link rel="canonical" href="https://againly.app/">
+<meta name="theme-color" content="#30B0E0">
+
+<!-- Open Graph (link previews on social / messaging) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Againly – Reminders that nudge you until it's done">
+<meta property="og:description" content="A recurring reminder app for Android that keeps reminding you until each task is done — only during your chosen hours.">
+<meta property="og:image" content="https://againly.app/Notification.png">
+<meta property="og:url" content="https://againly.app/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Structured data: tells Google this is an Android app -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Againly",
+  "operatingSystem": "Android",
+  "applicationCategory": "ProductivityApplication",
+  "description": "A recurring reminder app for Android that keeps nudging you with repeating reminders until each task is done, only during your active hours, with priority-based frequency.",
+  "url": "https://play.google.com/store/apps/details?id=com.againly",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.againly",
+  "image": "https://againly.app/icon.png",
+  "author": { "@type": "Organization", "name": "SmallWins Studio" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<!-- FAQ structured data: can earn rich results for question searches -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a recurring reminder app?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A recurring reminder app sends repeating reminders for a task instead of a single alert. Againly keeps gently nudging you until you mark the task done, so things you tend to forget don't slip through." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Againly stop notifications at night?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You set your active hours, for example 8 AM to 9 PM, and Againly only sends reminders within that window. No late-night or weekend pings unless you want them." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Againly free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Againly is free to download and use, with an optional Premium upgrade that adds Global Snooze, custom active-hours profiles, and custom reminder intervals. There are no ads and your data stays on your device." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --teal:#30B0E0; --violet:#7E5CE2; --ink:#1c2233; --muted:#5b647a;
+    --card:#ffffff; --bg:#f6f8fc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--teal),var(--violet));color:#fff;
+    padding:72px 0 84px;text-align:center}
+  .hero img.icon{width:104px;height:104px;border-radius:24px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:26px auto 14px;max-width:14ch;font-weight:800}
+  .hero p{font-size:clamp(17px,2.4vw,21px);max-width:36ch;margin:0 auto 30px;opacity:.95}
+  .cta{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#15233a;
+    font-weight:700;font-size:18px;padding:15px 30px;border-radius:14px;text-decoration:none;
+    box-shadow:0 10px 24px rgba(0,0,0,.18);transition:transform .15s}
+  .cta:hover{transform:translateY(-2px)}
+  .sub{display:block;margin-top:14px;font-size:14px;opacity:.85}
+
+  /* Features */
+  section{padding:64px 0}
+  h2{font-size:clamp(24px,3.4vw,34px);text-align:center;margin-bottom:10px;font-weight:800}
+  .lead{text-align:center;color:var(--muted);max-width:46ch;margin:0 auto 44px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .feat{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 4px 18px rgba(20,35,58,.06)}
+  .feat h3{font-size:19px;margin-bottom:8px}
+  .feat p{color:var(--muted);font-size:15.5px}
+  .dot{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--violet));
+    display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+
+  /* Screenshot gallery */
+  .show{background:#fff}
+  .gallery{display:flex;gap:24px;overflow-x:auto;padding:8px 2px 18px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .gallery img{height:580px;width:auto;border-radius:26px;flex:0 0 auto;
+    box-shadow:0 18px 50px rgba(20,35,58,.16);scroll-snap-align:center}
+  .gallery::-webkit-scrollbar{height:8px}
+  .gallery::-webkit-scrollbar-thumb{background:#d3d9e6;border-radius:8px}
+  @media(max-width:600px){.gallery img{height:480px}}
+
+  /* FAQ */
+  .faq details{background:var(--card);border-radius:12px;padding:18px 22px;margin-bottom:14px;
+    box-shadow:0 3px 12px rgba(20,35,58,.05)}
+  .faq summary{font-weight:700;cursor:pointer;font-size:17px}
+  .faq p{color:var(--muted);margin-top:10px}
+
+  /* Final CTA + footer */
+  .final{background:linear-gradient(135deg,var(--violet),var(--teal));color:#fff;text-align:center}
+  .final h2{color:#fff}
+  footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted);text-decoration:none;margin:0 10px}
+  footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="icon.png" alt="Againly app icon">
+    <h1>Reminders that nudge you until it's actually done</h1>
+    <p>Againly is a recurring reminder app for Android. Set a task once and get gentle, repeating reminders — only during your hours — until you mark it done.</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.againly">▶ Get it on Google Play</a>
+    <span class="sub">Free · No ads · Private by design</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Stop letting things slip</h2>
+    <p class="lead">Most reminder apps ping you once and give up. Againly keeps reminding you until the task is finished.</p>
+    <div class="grid">
+      <div class="feat"><div class="dot">🔁</div><h3>Recurring reminders</h3><p>Repeating nudges until you mark the task done — perfect for things you keep putting off.</p></div>
+      <div class="feat"><div class="dot">🌙</div><h3>Respects your hours</h3><p>Set your active hours and Againly only reminds you in that window. No late-night pings.</p></div>
+      <div class="feat"><div class="dot">⚡</div><h3>Priority-based nudging</h3><p>High, Medium, and Low priorities control how often each task reminds you.</p></div>
+      <div class="feat"><div class="dot">📊</div><h3>See your progress</h3><p>Track tasks completed today, this week, and this month — without the mental load.</p></div>
+      <div class="feat"><div class="dot">⏸️</div><h3>Global Snooze</h3><p>Pause everything during a meeting or day off, with automatic resume (Premium).</p></div>
+      <div class="feat"><div class="dot">🔒</div><h3>Private by design</h3><p>No ads, no tracking. Your reminders stay on your device.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="show">
+  <div class="wrap">
+    <h2>See it in action</h2>
+    <p class="lead">From the first nudge to the last — here's how Againly keeps you on track.</p>
+    <div class="gallery">
+      <img src="Notification.png" alt="Againly recurring reminder notification that nudges you until the task is done">
+      <img src="HomeScreen.png" alt="Againly home screen task list with priority levels and recurring reminders">
+      <img src="TaskAddition.png" alt="Adding a task in Againly and choosing the reminder frequency">
+      <img src="ActiveHours.png" alt="Setting active hours so reminders never arrive late at night">
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <p class="lead">A few things people ask about recurring reminder apps.</p>
+    <details><summary>What is a recurring reminder app?</summary><p>A recurring reminder app sends repeating reminders for a task instead of a single alert. Againly keeps gently nudging you until you mark the task done, so things you tend to forget don't slip through.</p></details>
+    <details><summary>How does Againly stop notifications at night?</summary><p>You set your active hours — for example 8 AM to 9 PM — and Againly only sends reminders within that window. No late-night or weekend pings unless you want them.</p></details>
+    <details><summary>Is Againly free?</summary><p>Yes. Againly is free to download and use, with an optional Premium upgrade that adds Global Snooze, custom active-hours profiles, and custom reminder intervals. No ads, and your data stays on your device.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Never forget what matters</h2>
+    <p class="lead" style="color:#eef3ff">Download Againly and let your tasks remind you until they're done.</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.againly">▶ Get it on Google Play</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://github.com/harishbohara11/AgainlyPrivacyPolicy/blob/main/README.md">Privacy Policy</a>
+    <a href="mailto:againlysup@gmail.com">Support</a>
+    <a href="https://play.google.com/store/apps/details?id=com.againly">Google Play</a>
+    <p style="margin-top:14px">© Againly · SmallWins Studio</p>
+  </div>
+</footer>
+
+</body>
+</html>
